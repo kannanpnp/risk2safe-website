@@ -829,7 +829,7 @@
             <li>Export to Excel for records and review</li>
             <li>Manual mode available — no API key required</li>
           </ul>
-          <button class="tool-launch-btn" onclick="openRegModal('Risk2Safe RA Studio', 'ra')">
+          <button type="button" class="tool-launch-btn" onclick="openRegModal('Risk2Safe RA Studio', 'ra')">
             Request Access <span class="tool-launch-arrow">→</span>
           </button>
         </div>
@@ -851,7 +851,7 @@
             <li>PDF, Word, Excel and JSON export</li>
             <li>P&ID / PFD document upload for richer AI context</li>
           </ul>
-          <button class="tool-launch-btn" onclick="openRegModal('Risk2Safe BowTie Studio', 'bt')">
+          <button type="button" class="tool-launch-btn" onclick="openRegModal('Risk2Safe BowTie Studio', 'bt')">
             Request Access <span class="tool-launch-arrow">→</span>
           </button>
         </div>
@@ -873,7 +873,7 @@
             <li>Export and import audit data</li>
             <li>Configurable for 9 different audit types</li>
           </ul>
-          <button class="tool-launch-btn" onclick="openRegModal('Risk2Safe PSM Audit Studio', 'psm')">
+          <button type="button" class="tool-launch-btn" onclick="openRegModal('Risk2Safe PSM Audit Studio', 'psm')">
             Request Access <span class="tool-launch-arrow">→</span>
           </button>
         </div>
@@ -890,7 +890,7 @@
   <!-- ===== REGISTRATION MODAL ===== -->
   <div class="reg-overlay" id="regOverlay" role="dialog" aria-modal="true" aria-labelledby="regModalTitle">
     <div class="reg-modal">
-      <button class="reg-modal-close" onclick="closeRegModal()" aria-label="Close">&times;</button>
+      <button type="button" class="reg-modal-close" onclick="closeRegModal()" aria-label="Close">&times;</button>
 
       <!-- Form view -->
       <div id="regFormView">
@@ -921,7 +921,7 @@
             <option>Other</option>
           </select>
           <input type="text" id="regCountry" placeholder="Country *" required />
-          <button class="reg-submit" onclick="submitRegistration()">Submit Access Request →</button>
+          <button type="button" class="reg-submit" onclick="submitRegistration()">Submit Access Request →</button>
         </div>
       </div>
 
@@ -941,62 +941,81 @@
   <script>
     var currentTool = '';
 
-    function openRegModal(toolName, toolKey) {
+    // Expose globally so inline onclick handlers always find these functions
+    window.openRegModal = function(toolName, toolKey) {
       currentTool = toolName;
+      // Reset form fields
+      ['regName','regOrg','regEmail','regRole','regCountry'].forEach(function(id) {
+        var el = document.getElementById(id);
+        if (el) el.value = '';
+      });
+      var sector = document.getElementById('regSector');
+      if (sector) sector.selectedIndex = 0;
+
       document.getElementById('regToolName').textContent = toolName;
-      document.getElementById('regFormView').style.display = 'block';
+      document.getElementById('regFormView').style.display  = 'block';
       document.getElementById('regSuccessView').style.display = 'none';
-      document.getElementById('regOverlay').classList.add('open');
+
+      var overlay = document.getElementById('regOverlay');
+      overlay.style.display = 'flex';          // show immediately
+      overlay.classList.add('open');
       document.body.style.overflow = 'hidden';
-    }
+    };
 
-    function closeRegModal() {
-      document.getElementById('regOverlay').classList.remove('open');
+    window.closeRegModal = function() {
+      var overlay = document.getElementById('regOverlay');
+      overlay.classList.remove('open');
+      overlay.style.display = 'none';
       document.body.style.overflow = '';
-    }
+    };
 
+    // Close on backdrop click
     document.getElementById('regOverlay').addEventListener('click', function(e) {
-      if (e.target === this) closeRegModal();
+      if (e.target === this) window.closeRegModal();
     });
 
+    // Close on Escape key
     document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') closeRegModal();
+      if (e.key === 'Escape') window.closeRegModal();
     });
 
-    function submitRegistration() {
-      var name    = document.getElementById('regName').value.trim();
-      var org     = document.getElementById('regOrg').value.trim();
-      var email   = document.getElementById('regEmail').value.trim();
-      var role    = document.getElementById('regRole').value.trim();
-      var sector  = document.getElementById('regSector').value;
-      var country = document.getElementById('regCountry').value.trim();
+    window.submitRegistration = function() {
+      var name    = (document.getElementById('regName').value    || '').trim();
+      var org     = (document.getElementById('regOrg').value     || '').trim();
+      var email   = (document.getElementById('regEmail').value   || '').trim();
+      var role    = (document.getElementById('regRole').value    || '').trim();
+      var sector  = (document.getElementById('regSector').value  || '').trim();
+      var country = (document.getElementById('regCountry').value || '').trim();
 
       if (!name || !org || !email || !role || !sector || !country) {
-        alert('Please complete all fields before submitting.'); return;
+        alert('Please complete all fields before submitting.');
+        return;
       }
       var emailRx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!emailRx.test(email)) {
-        alert('Please enter a valid email address.'); return;
+        alert('Please enter a valid email address.');
+        return;
       }
 
-      // Build mailto link so request lands in risktosafe@gmail.com inbox
+      // Show success screen FIRST, then open mailto in new tab
+      // (window.location.href for mailto can navigate away on some browsers)
+      document.getElementById('regSuccessToolName').textContent = currentTool;
+      document.getElementById('regFormView').style.display    = 'none';
+      document.getElementById('regSuccessView').style.display = 'block';
+
       var subject = encodeURIComponent('Risk2Safe Tool Access Request — ' + currentTool);
       var body = encodeURIComponent(
         'Tool Requested: ' + currentTool + '\n\n' +
-        'Full Name: ' + name + '\n' +
-        'Organisation: ' + org + '\n' +
-        'Email: ' + email + '\n' +
-        'Job Title: ' + role + '\n' +
-        'Industry Sector: ' + sector + '\n' +
-        'Country: ' + country
+        'Full Name: '      + name    + '\n' +
+        'Organisation: '   + org     + '\n' +
+        'Email: '          + email   + '\n' +
+        'Job Title: '      + role    + '\n' +
+        'Industry Sector: '+ sector  + '\n' +
+        'Country: '        + country
       );
-      fetch('https://formspree.io/f/xwvjyqbb', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ name: name, organisation: org, email: email, role: role, sector: sector, country: country, tool: currentTool }) }).then(function() { // Show success screen (this part stays the same) document.getElementById('regSuccessToolName').textContent = currentTool; document.getElementById('regFormView').style.display = 'none'; document.getElementById('regSuccessView').style.display = 'block'; });
-
-      // Show success screen
-      document.getElementById('regSuccessToolName').textContent = currentTool;
-      document.getElementById('regFormView').style.display = 'none';
-      document.getElementById('regSuccessView').style.display = 'block';
-    }
+      // Use window.open so mailto opens without navigating away
+      window.open('mailto:risktosafe@gmail.com?subject=' + subject + '&body=' + body, '_self');
+    };
   </script>
 
   <!-- FOOTER — FIX 5: internal links without rel="nofollow" -->
