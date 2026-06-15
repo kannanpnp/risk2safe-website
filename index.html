@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- FIX 1: Shortened meta description (143 chars) -->
+  <meta name="description" content="Risk2Safe helps businesses improve safety, reduce risks, and manage compliance with practical risk management solutions." />
+
+  <!-- FIX 2: Canonical tag -->
+  <link rel="canonical" href="https://risk2safe.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Risk2Safe: Risk Management and Safety Solutions" />
+  <meta property="og:description" content="Risk2Safe helps businesses improve safety, reduce risks, and manage compliance with practical risk management solutions." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://risk2safe.com/" />
+  <meta property="og:image" content="https://assets.api.gamma.app/v3sacohntm5oasb/screenshots/o06hsa0rjjlew65/z3d49anxsnu1q59/slide/yPRUGTEFLZ9_PflH3MXv9JOm-kI" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Risk2Safe: Risk Management and Safety Solutions" />
+  <meta name="twitter:description" content="Risk2Safe helps businesses improve safety, reduce risks, and manage compliance with practical risk management solutions." />
+  <meta name="twitter:image" content="https://assets.api.gamma.app/v3sacohntm5oasb/screenshots/o06hsa0rjjlew65/z3d49anxsnu1q59/slide/yPRUGTEFLZ9_PflH3MXv9JOm-kI" />
+
+  <meta name="robots" content="index, follow" />
+
+  <!-- FIX 6: Security headers via <meta> where possible (full headers need server config — see notes) -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+
+  <!-- PAGE TITLE -->
+  <title>Risk2Safe: Risk Management &amp; Safety Solutions | H2S Consultants</title>
+
+  <style>
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      color: #1a2332;
+      background: #ffffff;
+    }
+    a { color: #0d4a8f; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    img { max-width: 100%; height: auto; display: block; }
+
+    /* ===== LAYOUT ===== */
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+    section { padding: 64px 0; }
+    section:nth-child(even) { background: #f4f8ff; }
+
+    /* ===== HEADER / NAV ===== */
+    .site-header {
+      background: #0d1f3c;
+      color: #fff;
+      padding: 18px 0;
+      position: sticky; top: 0; z-index: 100;
+    }
+    .site-header .container {
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    }
+    .site-logo { display: flex; align-items: center; gap: 14px; }
+    .site-logo-primary { font-size: 1.4rem; font-weight: 700; color: #fff; }
+    .site-logo-primary span { color: #38bdf8; }
+    .site-logo-divider {
+      width: 1px; height: 28px; background: rgba(255,255,255,0.25); flex-shrink: 0;
+    }
+    .site-logo-company { display: flex; flex-direction: column; justify-content: center; }
+    .site-logo-company-name {
+      font-size: 0.88rem; font-weight: 600; color: #e2e8f0; letter-spacing: 0.01em; line-height: 1.2;
+    }
+    .site-logo-company-name sup { font-size: 0.6em; vertical-align: super; line-height: 0; }
+    .site-logo-company-sub {
+      font-size: 0.68rem; font-weight: 400; color: #94a3b8; letter-spacing: 0.04em; margin-top: 1px;
+    }
+    @media (max-width: 480px) {
+      .site-logo-divider, .site-logo-company { display: none; }
+    }
+    .site-nav { display: flex; gap: 24px; list-style: none; }
+    /* FIX 5: internal links have no rel="nofollow" */
+    .site-nav a { color: #cbd5e1; font-size: 0.95rem; }
+    .site-nav a:hover { color: #fff; text-decoration: none; }
+    .nav-ai-link {
+      background: linear-gradient(90deg, #0ea5e9, #6366f1);
+      color: #fff !important;
+      padding: 5px 13px;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 0.88rem !important;
+      transition: opacity 0.2s;
+    }
+    .nav-ai-link:hover { opacity: 0.85; }
+
+    /* ===== AI TOOLS SECTION ===== */
+    .ai-tools-section {
+      background: linear-gradient(160deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
+      color: #e2e8f0;
+      padding: 80px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .ai-tools-section::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 60% 50% at 70% 40%, rgba(99,102,241,0.18) 0%, transparent 70%),
+                  radial-gradient(ellipse 40% 40% at 20% 70%, rgba(14,165,233,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .ai-intro-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start;
+      margin-bottom: 56px;
+    }
+    @media (max-width: 750px) { .ai-intro-grid { grid-template-columns: 1fr; gap: 32px; } }
+    .ai-intro-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(99,102,241,0.2); border: 1px solid rgba(99,102,241,0.4);
+      color: #a5b4fc; font-size: 0.75rem; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 5px 14px; border-radius: 20px; margin-bottom: 16px;
+    }
+    .ai-section-title {
+      font-size: clamp(1.7rem, 3.5vw, 2.4rem);
+      font-weight: 800; color: #f1f5f9;
+      line-height: 1.2; margin-bottom: 20px;
+    }
+    .ai-section-title span { color: #818cf8; }
+    .ai-intro-body { font-size: 0.97rem; color: #94a3b8; line-height: 1.8; }
+    .ai-intro-body p { margin-bottom: 14px; }
+    .ai-intro-body p:last-child { margin-bottom: 0; }
+    .ai-pillars { display: flex; flex-direction: column; gap: 14px; }
+    .ai-pillar {
+      display: flex; gap: 14px; align-items: flex-start;
+      background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 10px; padding: 16px 18px;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .ai-pillar:hover { border-color: rgba(129,140,248,0.35); background: rgba(99,102,241,0.07); }
+    .ai-pillar-icon { font-size: 1.6rem; flex-shrink: 0; margin-top: 2px; }
+    .ai-pillar-text strong { display: block; font-size: 0.93rem; font-weight: 700; color: #c7d2fe; margin-bottom: 4px; }
+    .ai-pillar-text span { font-size: 0.86rem; color: #94a3b8; line-height: 1.6; }
+    /* Tool cards */
+    .ai-tools-label {
+      font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: #6366f1; margin-bottom: 20px;
+    }
+    /* Tool cards — grid now declared with BowTie styles above */
+    .ai-tool-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 16px; padding: 28px 26px;
+      display: flex; flex-direction: column;
+      transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+      position: relative; overflow: hidden;
+    }
+    .ai-tool-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    }
+    .ai-tool-card.card-ra::before { background: linear-gradient(90deg, #0ea5e9, #38bdf8); }
+    .ai-tool-card.card-psm::before { background: linear-gradient(90deg, #6366f1, #a855f7); }
+    .ai-tool-card.card-bt::before { background: linear-gradient(90deg, #0f766e, #14b8a6); }
+    .ai-tool-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(129,140,248,0.3);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.35);
+    }
+    .tool-card-tag {
+      display: inline-block; font-size: 0.68rem; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 3px 10px; border-radius: 12px; margin-bottom: 14px;
+      width: fit-content;
+    }
+    .card-ra .tool-card-tag { background: rgba(14,165,233,0.15); color: #38bdf8; }
+    .card-psm .tool-card-tag { background: rgba(99,102,241,0.15); color: #a5b4fc; }
+    .ai-tool-card h3 {
+      font-size: 1.15rem; font-weight: 700; color: #f1f5f9;
+      margin-bottom: 6px; line-height: 1.3;
+    }
+    .tool-sub { font-size: 0.78rem; color: #64748b; font-weight: 500; margin-bottom: 14px; }
+    .ai-tool-card p { font-size: 0.9rem; color: #94a3b8; line-height: 1.7; flex: 1; margin-bottom: 20px; }
+    .tool-features { list-style: none; margin-bottom: 24px; display: flex; flex-direction: column; gap: 7px; }
+    .tool-features li {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 0.83rem; color: #94a3b8;
+    }
+    .tool-features li::before {
+      content: '✓'; font-weight: 700; font-size: 0.8rem; flex-shrink: 0;
+    }
+    .card-ra .tool-features li::before { color: #38bdf8; }
+    .card-psm .tool-features li::before { color: #a5b4fc; }
+    .card-bt .tool-features li::before { color: #5eead4; }
+
+    /* BowTie card theme */
+    .ai-tool-card.card-bt::before { background: linear-gradient(90deg, #0f766e, #14b8a6); }
+    .card-bt .tool-card-tag { background: rgba(20,184,166,0.15); color: #5eead4; }
+
+    /* 3-column grid */
+    .ai-tool-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    @media (max-width: 980px) { .ai-tool-cards { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 600px) { .ai-tool-cards { grid-template-columns: 1fr; } }
+
+    /* Request Access button (replaces direct launch) */
+    .tool-launch-btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 12px 22px; border-radius: 8px; font-weight: 700; font-size: 0.9rem;
+      text-decoration: none !important; transition: opacity 0.2s, transform 0.15s;
+      cursor: pointer; border: none; width: 100%;
+    }
+    .tool-launch-btn:hover { opacity: 0.9; transform: scale(1.02); text-decoration: none; }
+    .card-ra .tool-launch-btn { background: linear-gradient(90deg, #0369a1, #0ea5e9); color: #fff; }
+    .card-psm .tool-launch-btn { background: linear-gradient(90deg, #4338ca, #6366f1); color: #fff; }
+    .card-bt .tool-launch-btn { background: linear-gradient(90deg, #0f766e, #14b8a6); color: #fff; }
+    .tool-launch-arrow { font-size: 1rem; transition: transform 0.2s; }
+    .tool-launch-btn:hover .tool-launch-arrow { transform: translateX(3px); }
+
+    /* Gated access badge on each card */
+    .tool-gate-badge {
+      display: inline-flex; align-items: center; gap: 5px;
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+      color: #fbbf24; background: rgba(251,191,36,0.1); border: 1px solid rgba(251,191,36,0.28);
+      padding: 3px 10px; border-radius: 12px; margin-bottom: 10px;
+    }
+
+    /* Registration modal */
+    .reg-overlay {
+      display: none; position: fixed; inset: 0; z-index: 2000;
+      background: rgba(5,10,25,0.88); backdrop-filter: blur(6px);
+      align-items: center; justify-content: center; padding: 20px;
+    }
+    .reg-overlay.open { display: flex; }
+    .reg-modal {
+      background: #0f172a; border: 1px solid rgba(99,102,241,0.35);
+      border-radius: 18px; padding: 40px 36px; max-width: 480px; width: 100%;
+      box-shadow: 0 32px 80px rgba(0,0,0,0.65); position: relative;
+    }
+    @media (max-width: 520px) { .reg-modal { padding: 28px 20px; } }
+    .reg-modal-close {
+      position: absolute; top: 16px; right: 18px;
+      background: none; border: none; color: #475569;
+      font-size: 1.4rem; cursor: pointer; line-height: 1; transition: color 0.2s;
+    }
+    .reg-modal-close:hover { color: #e2e8f0; }
+    .reg-modal-icon { font-size: 2.2rem; margin-bottom: 8px; }
+    .reg-modal h3 { font-size: 1.2rem; font-weight: 800; color: #f1f5f9; margin-bottom: 4px; }
+    .reg-modal-tool-name { font-size: 0.82rem; color: #818cf8; font-weight: 600; margin-bottom: 16px; }
+    .reg-modal-desc { font-size: 0.88rem; color: #94a3b8; line-height: 1.65; margin-bottom: 22px; }
+    .reg-form { display: flex; flex-direction: column; gap: 12px; }
+    .reg-form input, .reg-form select {
+      background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 8px; padding: 11px 14px; color: #e2e8f0; font-size: 0.9rem; width: 100%;
+      font-family: inherit; transition: border-color 0.2s;
+    }
+    .reg-form input::placeholder { color: #475569; }
+    .reg-form input:focus, .reg-form select:focus { outline: none; border-color: rgba(99,102,241,0.55); }
+    .reg-form select option { background: #1e293b; color: #e2e8f0; }
+    .reg-submit {
+      background: linear-gradient(90deg, #4338ca, #6366f1); color: #fff;
+      border: none; border-radius: 8px; padding: 13px 20px;
+      font-size: 0.95rem; font-weight: 700; cursor: pointer; font-family: inherit;
+      transition: opacity 0.2s; margin-top: 4px;
+    }
+    .reg-submit:hover { opacity: 0.88; }
+    .reg-success { display: none; text-align: center; padding: 10px 0; }
+    .reg-success-icon { font-size: 2.8rem; margin-bottom: 12px; }
+    .reg-success h4 { font-size: 1.1rem; font-weight: 700; color: #f1f5f9; margin-bottom: 8px; }
+    .reg-success p { font-size: 0.88rem; color: #94a3b8; line-height: 1.6; margin-bottom: 0; }
+
+    .ai-disclaimer {
+      margin-top: 40px; padding: 16px 20px;
+      background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 10px; font-size: 0.82rem; color: #64748b; line-height: 1.6;
+      text-align: center;
+    }
+    .ai-disclaimer strong { color: #94a3b8; }
+
+    /* ===== HERO ===== */
+    .hero {
+      background: linear-gradient(135deg, #0d1f3c 0%, #1a4a7a 60%, #0d4a8f 100%);
+      color: #fff;
+      padding: 96px 0 80px;
+      text-align: center;
+    }
+    /* FIX 1: H1 added — clear, keyword-rich */
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 16px;
+      letter-spacing: -0.5px;
+    }
+    /* FIX 1: H2 added — supporting subtitle */
+    .hero h2 {
+      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+      font-weight: 400;
+      color: #93c5fd;
+      margin-bottom: 40px;
+      max-width: 680px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .hero-cta { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .btn-primary {
+      background: #38bdf8; color: #0d1f3c;
+      padding: 14px 32px; border-radius: 6px;
+      font-weight: 700; font-size: 1rem;
+      transition: background 0.2s;
+    }
+    .btn-primary:hover { background: #7dd3fc; text-decoration: none; }
+    .btn-outline {
+      border: 2px solid #38bdf8; color: #38bdf8;
+      padding: 12px 30px; border-radius: 6px;
+      font-weight: 600; font-size: 1rem;
+      transition: all 0.2s;
+    }
+    .btn-outline:hover { background: rgba(56,189,248,0.1); text-decoration: none; }
+
+    /* ===== SECTION HEADINGS ===== */
+    .section-label {
+      text-transform: uppercase; font-size: 0.78rem; letter-spacing: 2px;
+      color: #0d4a8f; font-weight: 700; margin-bottom: 8px;
+    }
+    .section-title {
+      font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+      font-weight: 700; color: #0d1f3c; margin-bottom: 16px;
+    }
+    .section-lead {
+      font-size: 1.05rem; color: #445; max-width: 680px; margin-bottom: 40px;
+    }
+
+    /* ===== WHY EXTERNAL CONSULT ===== */
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px; margin-top: 40px;
+    }
+    .why-card {
+      background: #fff; border-left: 4px solid #38bdf8;
+      padding: 24px 20px; border-radius: 0 8px 8px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .why-card h3 { font-size: 1.05rem; font-weight: 700; color: #0d1f3c; margin-bottom: 8px; }
+    .why-card p { font-size: 0.93rem; color: #445; }
+
+    /* ===== SERVICES ===== */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 28px; margin-top: 40px;
+    }
+    .service-card {
+      background: #fff; border-radius: 12px;
+      padding: 28px 24px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      border-top: 4px solid #0d4a8f;
+    }
+    .service-card h3 { font-size: 1.1rem; font-weight: 700; color: #0d1f3c; margin-bottom: 10px; }
+    .service-card p { font-size: 0.93rem; color: #445; line-height: 1.65; }
+
+    /* ===== WHY CHOOSE (image section) ===== */
+    .why-choose {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center;
+    }
+    @media (max-width: 700px) { .why-choose { grid-template-columns: 1fr; } }
+    .why-choose-img {
+      border-radius: 12px; overflow: hidden;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+    }
+    .why-choose-img img { width: 100%; height: 340px; object-fit: cover; }
+    .benefits-list { list-style: none; margin-top: 20px; }
+    .benefits-list li {
+      display: flex; align-items: flex-start; gap: 12px;
+      padding: 10px 0; border-bottom: 1px solid #e5eaf3;
+      font-size: 0.97rem;
+    }
+    .benefits-list li:last-child { border-bottom: none; }
+    .benefit-icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 2px; }
+    .benefit-text strong { display: block; font-weight: 700; color: #0d1f3c; margin-bottom: 2px; }
+    .benefit-text span { color: #556; font-size: 0.9rem; }
+
+    /* ===== INDUSTRIES ===== */
+    .industries-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px; margin-top: 32px;
+    }
+    .industry-card {
+      background: #fff; border-radius: 10px; padding: 24px 20px; text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    }
+    .industry-icon { font-size: 2.2rem; margin-bottom: 10px; }
+    .industry-card h3 { font-size: 0.97rem; font-weight: 700; color: #0d1f3c; margin-bottom: 6px; }
+    .industry-card p { font-size: 0.85rem; color: #556; }
+
+    /* ===== PROCESS ===== */
+    .process-steps {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 24px; margin-top: 40px;
+    }
+    .step {
+      background: #fff; border-radius: 10px; padding: 28px 20px; text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07); position: relative;
+    }
+    .step-num {
+      width: 48px; height: 48px; border-radius: 50%;
+      background: #0d4a8f; color: #fff;
+      font-size: 1.3rem; font-weight: 800;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 14px;
+    }
+    .step h3 { font-size: 0.97rem; font-weight: 700; color: #0d1f3c; margin-bottom: 8px; }
+    .step p { font-size: 0.88rem; color: #556; }
+
+    /* ===== ABOUT ===== */
+    .about-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px; margin-top: 40px;
+    }
+    .about-card {
+      background: #fff; border-radius: 10px; padding: 24px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    }
+    .about-card h3 { font-size: 1rem; font-weight: 700; color: #0d4a8f; margin-bottom: 8px; }
+    .about-card p { font-size: 0.93rem; color: #445; }
+
+    /* ===== STATS ===== */
+    .stats-row {
+      display: flex; flex-wrap: wrap; gap: 24px; justify-content: center;
+      margin: 40px 0;
+    }
+    .stat-box {
+      text-align: center; flex: 1; min-width: 120px;
+    }
+    .stat-num { font-size: 2.5rem; font-weight: 800; color: #0d4a8f; }
+    .stat-label { font-size: 0.87rem; color: #556; margin-top: 4px; }
+
+    /* ===== CONTACT CTA ===== */
+    .contact-cta {
+      background: linear-gradient(135deg, #0d1f3c, #1a4a7a);
+      color: #fff; text-align: center;
+    }
+    .contact-cta h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 700; margin-bottom: 12px; }
+    .contact-cta p { font-size: 1.05rem; color: #93c5fd; margin-bottom: 32px; }
+    .contact-details {
+      margin-top: 32px;
+      font-size: 0.95rem; color: #cbd5e1;
+    }
+    .contact-details a { color: #38bdf8; }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #0a1628; color: #94a3b8;
+      padding: 32px 0; text-align: center; font-size: 0.88rem;
+    }
+    footer a { color: #38bdf8; }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 600px) {
+      .site-nav { display: none; }
+      section { padding: 48px 0; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      * { transition: none !important; animation: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION — FIX 5: No rel="nofollow" on internal links -->
+  <header class="site-header" role="banner">
+    <div class="container">
+      <div class="site-logo">
+        <div class="site-logo-primary">Risk<span>2</span>Safe</div>
+        <div class="site-logo-divider" aria-hidden="true"></div>
+        <div class="site-logo-company">
+          <span class="site-logo-company-name">H<sup>2</sup>S Consultants Pvt Ltd</span>
+          <span class="site-logo-company-sub">Safety &amp; Risk Solutions</span>
+        </div>
+      </div>
+      <nav aria-label="Main navigation">
+        <ul class="site-nav">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#industries">Industries</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#ai-tools" class="nav-ai-link">⚡ AI Tools</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO — FIX 1: H1 + H2 headings -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="container">
+        <h1 id="hero-heading">Risk2Safe: Risk Management and Safety Solutions</h1>
+        <h2>Protect your business with practical safety, compliance, and process risk management support</h2>
+        <div class="hero-cta">
+          <a class="btn-primary" href="#contact">Schedule Free Consultation</a>
+          <a class="btn-outline" href="#services">Explore Services</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY EXTERNAL CONSULTATION -->
+    <section id="why" aria-labelledby="why-heading">
+      <div class="container">
+        <p class="section-label">The case for external expertise</p>
+        <h2 class="section-title" id="why-heading">Why External Safety Consultation Matters</h2>
+        <!-- FIX 7: Readability — short sentences, plain language -->
+        <p class="section-lead">
+          Internal teams work hard — but they can develop blind spots over time. An external safety consultant brings a fresh perspective, specialist knowledge, and objective findings that drive real improvement.
+        </p>
+        <div class="why-grid">
+          <div class="why-card">
+            <h3>Independent Review</h3>
+            <p>An outside expert has no stake in internal politics. They assess what is actually happening — not what people assume is happening — and surface risks your team may have stopped noticing.</p>
+          </div>
+          <div class="why-card">
+            <h3>Systematic Gap Analysis</h3>
+            <p>Structured methodologies uncover the gap between your current practices and what regulations or industry standards require — before an incident or audit does it for you.</p>
+          </div>
+          <div class="why-card">
+            <h3>Regulatory Compliance</h3>
+            <p>Safety regulations change frequently. A specialist keeps your operations aligned with current requirements across all applicable standards, reducing compliance risk.</p>
+          </div>
+          <div class="why-card">
+            <h3>Practical Recommendations</h3>
+            <p>Beyond identifying problems, experienced consultants provide clear, prioritised actions that fit your budget and operational context — not generic checklists.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" aria-labelledby="services-heading">
+      <div class="container">
+        <p class="section-label">What we offer</p>
+        <h2 class="section-title" id="services-heading">Services Offered</h2>
+        <p class="section-lead">Each service is tailored to your industry, size, and operational risk profile.</p>
+        <div class="services-grid">
+          <div class="service-card">
+            <h3>Safety Culture Assessments &amp; Audits</h3>
+            <p>In-depth evaluations that identify hazards, measure compliance gaps, and produce clear recommendations. We assess both systems and behaviours — because culture is the root of most incidents.</p>
+          </div>
+          <div class="service-card">
+            <h3>Process Safety Compliance Consulting</h3>
+            <p>We audit your process safety management systems to verify they are fit for purpose and correctly implemented. Our reviews protect employees, communities, and the environment.</p>
+          </div>
+          <div class="service-card">
+            <h3>Occupational Hygiene Management</h3>
+            <p>Comprehensive assessment and control of chemical, physical, and biological hazards in your workplace. Includes monitoring, laboratory analysis, and implementation of proven controls.</p>
+          </div>
+          <div class="service-card">
+            <h3>Training &amp; Competency Management</h3>
+            <p>Structured programmes to develop and maintain employee safety competencies. We build training frameworks aligned with industry standards and verify skills with objective assessments.</p>
+          </div>
+          <div class="service-card">
+            <h3>Safe Work Systems &amp; Risk Management</h3>
+            <p>Development of safe work procedures, permit-to-work systems, and job hazard analyses. We create systematic approaches that reduce operational risk and drive consistent performance.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE — FIX 4: Image with alt text, width, height -->
+    <section id="why-choose" aria-labelledby="choose-heading">
+      <div class="container">
+        <div class="why-choose">
+          <div class="why-choose-img">
+            <!-- FIX 4: descriptive alt text, explicit width/height -->
+            <img
+              src="https://cdn.gamma.app/v3sacohntm5oasb/generated-images/GLs1DVrVpCpQ2omKsdTSr.jpg"
+              alt="Safety consultant conducting a workplace risk assessment at an industrial facility"
+              width="600"
+              height="340"
+              loading="lazy"
+            />
+          </div>
+          <div>
+            <p class="section-label">Why choose us</p>
+            <h2 class="section-title" id="choose-heading">Why Choose Our Consulting Services</h2>
+            <!-- FIX 7: Bullet list for scanability -->
+            <ul class="benefits-list">
+              <li>
+                <span class="benefit-icon">🎯</span>
+                <span class="benefit-text">
+                  <strong>Personalised Approach</strong>
+                  <span>Tailored solutions for your specific industry and risk profile — no off-the-shelf templates.</span>
+                </span>
+              </li>
+              <li>
+                <span class="benefit-icon">📉</span>
+                <span class="benefit-text">
+                  <strong>Proven Results</strong>
+                  <span>Clients typically see a 35% average reduction in workplace incidents within 12 months.</span>
+                </span>
+              </li>
+              <li>
+                <span class="benefit-icon">💰</span>
+                <span class="benefit-text">
+                  <strong>Cost-Effective</strong>
+                  <span>Transparent pricing with no hidden fees. Protecting your people protects your bottom line.</span>
+                </span>
+              </li>
+              <li>
+                <span class="benefit-icon">⚡</span>
+                <span class="benefit-text">
+                  <strong>24-Hour Emergency Support</strong>
+                  <span>Responsive consultation available around the clock when you need urgent safety guidance.</span>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INDUSTRIES -->
+    <section id="industries" aria-labelledby="industries-heading">
+      <div class="container">
+        <p class="section-label">Sectors we serve</p>
+        <h2 class="section-title" id="industries-heading">Industries Served</h2>
+        <div class="industries-grid">
+          <div class="industry-card">
+            <div class="industry-icon">🏭</div>
+            <h3>Manufacturing</h3>
+            <p>Specialised safety protocols for industrial facilities and production environments.</p>
+          </div>
+          <div class="industry-card">
+            <div class="industry-icon">🏗️</div>
+            <h3>Construction</h3>
+            <p>Comprehensive site safety management for development projects of all sizes.</p>
+          </div>
+          <div class="industry-card">
+            <div class="industry-icon">🏥</div>
+            <h3>Healthcare</h3>
+            <p>Tailored safety solutions for medical facilities focusing on staff and patient protection.</p>
+          </div>
+          <div class="industry-card">
+            <div class="industry-icon">🚚</div>
+            <h3>Transportation</h3>
+            <p>Safety systems for logistics operations that protect drivers, cargo, and communities.</p>
+          </div>
+          <div class="industry-card">
+            <div class="industry-icon">⚙️</div>
+            <h3>Oil &amp; Gas</h3>
+            <p>30+ years of upstream, offshore, and downstream process safety expertise.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section aria-label="Key statistics">
+      <div class="container" style="text-align:center;">
+        <p class="section-label">Our track record</p>
+        <h2 class="section-title" style="margin-left:auto;margin-right:auto;max-width:600px;">
+          Results That Speak for Themselves
+        </h2>
+        <div class="stats-row">
+          <div class="stat-box">
+            <div class="stat-num">30+</div>
+            <div class="stat-label">Years of industry experience</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num">35%</div>
+            <div class="stat-label">Average incident reduction</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num">98%</div>
+            <div class="stat-label">Client satisfaction rate</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num">24h</div>
+            <div class="stat-label">Emergency response time</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section id="process" aria-labelledby="process-heading">
+      <div class="container">
+        <p class="section-label">How it works</p>
+        <h2 class="section-title" id="process-heading">Our Consultation Process</h2>
+        <p class="section-lead">Four straightforward steps from first contact to measurable improvement.</p>
+        <div class="process-steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <h3>Initial Assessment</h3>
+            <p>A free 30-minute call to understand your safety needs and goals — no obligation.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <h3>On-Site Evaluation</h3>
+            <p>A comprehensive review of your current safety practices and potential hazard areas.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <h3>Detailed Report</h3>
+            <p>Prioritised recommendations with a clear, realistic implementation timeline.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">4</div>
+            <h3>Implementation Support</h3>
+            <p>Ongoing guidance and progress monitoring to make sure improvements stick.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <p class="section-label">Your consultant</p>
+        <h2 class="section-title" id="about-heading">About Your Safety Consultant</h2>
+        <p class="section-lead">
+          A Senior HSE and Emergency Response professional with over 30 years of experience across upstream, offshore, downstream, EPC, and drilling environments.
+        </p>
+        <div class="about-grid">
+          <div class="about-card">
+            <h3>Experienced Professional</h3>
+            <p>30+ years in occupational health and safety across oil and gas entities including ADNOC, Dubai Petroleum, Dolphin Energy, and Shell — providing deep insider knowledge for every engagement.</p>
+          </div>
+          <div class="about-card">
+            <h3>Published Industry Expert</h3>
+            <p>Published author and SPE conference speaker (SPE-177740), staying at the forefront of emerging process safety trends and best practices.</p>
+          </div>
+          <div class="about-card">
+            <h3>Highly Certified</h3>
+            <p>Credentials include CSP, CIH, CFPS, CPSP, FIFireE, ICS-400, and ISO 45001 / 14001 / 22301 Lead Auditor — a comprehensive stack covering safety, hygiene, fire, and emergency management.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT CTA -->
+    <section id="contact" class="contact-cta" aria-labelledby="contact-heading">
+      <div class="container">
+        <h2 id="contact-heading">Ready to Make Your Workplace Safer?</h2>
+        <p>Schedule a free 30-minute consultation — no obligation, guaranteed response within one business day.</p>
+        <a class="btn-primary" href="mailto:risktosafe@gmail.com">Contact Us Today</a>
+        <div class="contact-details">
+          <p>📞 <a href="tel:+919003146969">+91 900-314-6969</a></p>
+          <p>✉️ <a href="mailto:risktosafe@gmail.com">risktosafe@gmail.com</a></p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== AI TOOLS SECTION ===== -->
+  <section id="ai-tools" class="ai-tools-section" aria-labelledby="ai-tools-heading">
+    <div class="container" style="position:relative; z-index:1;">
+
+      <!-- Intro: write-up on left, pillars on right -->
+      <div class="ai-intro-grid">
+        <div>
+          <div class="ai-intro-badge">⚡ Powered by AI</div>
+          <h2 class="ai-section-title" id="ai-tools-heading">
+            AI-Assisted <span>HSE Tools</span><br>Built for the Field
+          </h2>
+          <div class="ai-intro-body">
+            <p>
+              Artificial intelligence is reshaping how safety professionals identify hazards, conduct audits, and manage risk. Where traditional tools relied on the practitioner's memory and experience alone, AI-assisted platforms can instantly surface relevant hazard scenarios, reference regulatory frameworks, and flag gaps — turning hours of preparation into minutes.
+            </p>
+            <p>
+              In HSE practice, AI does not replace the safety professional's judgement — it amplifies it. Experienced practitioners bring context, site knowledge, and consequence awareness that no model can replicate. AI brings breadth: pattern recognition across thousands of incidents, instant cross-referencing of standards, and structured prompting that reduces the risk of a critical hazard being missed.
+            </p>
+            <p>
+              The Risk2Safe suite applies this principle across three high-value workflows: task-based risk assessment, bow tie risk analysis, and process safety auditing. All tools are browser-based, require no installation, and connect directly to AI via your own API key — keeping your data private and under your control at all times.
+            </p>
+          </div>
+        </div>
+        <div class="ai-pillars">
+          <div class="ai-pillar">
+            <div class="ai-pillar-icon">🔍</div>
+            <div class="ai-pillar-text">
+              <strong>Hazard Identification at Speed</strong>
+              <span>AI surfaces energy-based hazard scenarios, exposure pathways, and failure modes faster than manual brainstorming — while ensuring systematic coverage across all guidewords and energy types.</span>
+            </div>
+          </div>
+          <div class="ai-pillar">
+            <div class="ai-pillar-icon">📋</div>
+            <div class="ai-pillar-text">
+              <strong>Audit-Ready Compliance Support</strong>
+              <span>Cross-reference findings against PSM elements, CCPS guidance, and EI frameworks in real time. AI generates audit narratives and compliance scores — ready for management review or regulatory submission.</span>
+            </div>
+          </div>
+          <div class="ai-pillar">
+            <div class="ai-pillar-icon">🔒</div>
+            <div class="ai-pillar-text">
+              <strong>Your Data, Your Control</strong>
+              <span>All Risk2Safe tools operate directly from your browser. No data is stored on any server. Your API key is held only in local storage and cleared whenever you choose.</span>
+            </div>
+          </div>
+          <div class="ai-pillar">
+            <div class="ai-pillar-icon">🎓</div>
+            <div class="ai-pillar-text">
+              <strong>Built by HSE Professionals</strong>
+              <span>Designed by a CSP, CIH, and FIFireE with 30+ years of field experience — so the AI prompts, risk matrices, and audit frameworks reflect how safety work is actually done, not how it looks in a textbook.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tool cards -->
+      <p class="ai-tools-label">Risk2Safe AI Tool Suite — Request Access Below</p>
+      <div class="ai-tool-cards">
+
+        <!-- Card 1: RA Studio -->
+        <div class="ai-tool-card card-ra">
+          <span class="tool-gate-badge">🔐 Access by Request</span>
+          <span class="tool-card-tag">Risk Assessment</span>
+          <h3>Risk2Safe RA Studio</h3>
+          <p class="tool-sub">Task-Based Risk Assessment · EI 3580 Methodology · 6×6 Matrix</p>
+          <p>
+            A structured, AI-assisted risk assessment platform built around the Energy Institute EI 3580 methodology. Define work steps, identify hazards by energy source, assess likelihood and severity on a corporate 6×6 risk matrix, and let AI suggest hazards, EPCs, and control measures.
+          </p>
+          <ul class="tool-features">
+            <li>Energy-source based hazard identification</li>
+            <li>AI-suggested hazards, EPCs and controls per step</li>
+            <li>ADNOC-aligned 6×6 corporate risk matrix</li>
+            <li>Full AI step analysis in one click</li>
+            <li>Export to Excel for records and review</li>
+            <li>Manual mode available — no API key required</li>
+          </ul>
+          <button class="tool-launch-btn" onclick="openRegModal('Risk2Safe RA Studio', 'ra')">
+            Request Access <span class="tool-launch-arrow">→</span>
+          </button>
+        </div>
+
+        <!-- Card 2: BowTie Studio -->
+        <div class="ai-tool-card card-bt">
+          <span class="tool-gate-badge">🔐 Access by Request</span>
+          <span class="tool-card-tag">Bow Tie Analysis</span>
+          <h3>Risk2Safe BowTie Studio</h3>
+          <p class="tool-sub">Visual Bow Tie Risk Assessment · AI-Assisted · SCE/SCT Identification</p>
+          <p>
+            A professional bow tie risk assessment platform that takes you from hazard and top event through to threats, consequences, barriers, and degradation controls — with AI suggesting each element in context. Auto-identifies Safety Critical Elements and Tasks, then generates full SCTA proformas via Claude.
+          </p>
+          <ul class="tool-features">
+            <li>Full bow tie diagram — threats, barriers, consequences</li>
+            <li>AI suggestions for barriers and degradation controls</li>
+            <li>Auto-flagged SCEs and SCTs via risk matrix</li>
+            <li>Deep 7-step SCTA proforma for each SCT</li>
+            <li>PDF, Word, Excel and JSON export</li>
+            <li>P&ID / PFD document upload for richer AI context</li>
+          </ul>
+          <button class="tool-launch-btn" onclick="openRegModal('Risk2Safe BowTie Studio', 'bt')">
+            Request Access <span class="tool-launch-arrow">→</span>
+          </button>
+        </div>
+
+        <!-- Card 3: PSM Audit Studio -->
+        <div class="ai-tool-card card-psm">
+          <span class="tool-gate-badge">🔐 Access by Request</span>
+          <span class="tool-card-tag">Process Safety</span>
+          <h3>Risk2Safe PSM Audit Studio</h3>
+          <p class="tool-sub">EI Framework · CCPS-Aligned · All 20 PSM Elements</p>
+          <p>
+            A comprehensive process safety management audit tool covering all 20 PSM elements against the Energy Institute framework and CCPS guidance. Choose between a light 89-question audit or a detailed 445-question deep-dive, with AI-assisted finding narratives and professional report generation.
+          </p>
+          <ul class="tool-features">
+            <li>All 20 PSM elements — EI &amp; CCPS aligned</li>
+            <li>Light (89 Q) or Detailed (445 Q) audit modes</li>
+            <li>AI-assisted finding narratives and scoring</li>
+            <li>Supports OpenAI GPT-4o-mini and Claude Haiku</li>
+            <li>Export and import audit data</li>
+            <li>Configurable for 9 different audit types</li>
+          </ul>
+          <button class="tool-launch-btn" onclick="openRegModal('Risk2Safe PSM Audit Studio', 'psm')">
+            Request Access <span class="tool-launch-arrow">→</span>
+          </button>
+        </div>
+
+      </div>
+
+      <p class="ai-disclaimer">
+        <strong>Access is provided upon review.</strong> Submit your registration below — we will assess your request and send login details to your email within one business day. AI suggestions are a professional aid — always apply your own expert judgement before finalising any risk assessment or audit finding.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- ===== REGISTRATION MODAL ===== -->
+  <div class="reg-overlay" id="regOverlay" role="dialog" aria-modal="true" aria-labelledby="regModalTitle">
+    <div class="reg-modal">
+      <button class="reg-modal-close" onclick="closeRegModal()" aria-label="Close">&times;</button>
+
+      <!-- Form view -->
+      <div id="regFormView">
+        <div class="reg-modal-icon">🔐</div>
+        <h3 id="regModalTitle">Request Tool Access</h3>
+        <p class="reg-modal-tool-name" id="regToolName"></p>
+        <p class="reg-modal-desc">
+          Access to Risk2Safe AI tools is provided upon review. Complete the form below and we will send your access details within one business day.
+        </p>
+        <div class="reg-form">
+          <input type="text" id="regName" placeholder="Full Name *" required />
+          <input type="text" id="regOrg" placeholder="Organisation / Company *" required />
+          <input type="email" id="regEmail" placeholder="Work Email Address *" required />
+          <input type="text" id="regRole" placeholder="Job Title / Role *" required />
+          <select id="regSector">
+            <option value="" disabled selected>Industry Sector *</option>
+            <option>Oil &amp; Gas — Upstream</option>
+            <option>Oil &amp; Gas — Downstream / Refining</option>
+            <option>Oil &amp; Gas — Offshore</option>
+            <option>Petrochemicals / Chemicals</option>
+            <option>EPC / Engineering Contractor</option>
+            <option>Manufacturing</option>
+            <option>Construction</option>
+            <option>Healthcare</option>
+            <option>Transportation / Logistics</option>
+            <option>Consulting / Advisory</option>
+            <option>Academia / Research</option>
+            <option>Other</option>
+          </select>
+          <input type="text" id="regCountry" placeholder="Country *" required />
+          <button class="reg-submit" onclick="submitRegistration()">Submit Access Request →</button>
+        </div>
+      </div>
+
+      <!-- Success view -->
+      <div class="reg-success" id="regSuccessView">
+        <div class="reg-success-icon">✅</div>
+        <h4>Request Received!</h4>
+        <p>
+          Thank you for your interest in <strong id="regSuccessToolName"></strong>.<br><br>
+          We have received your registration and will review it shortly. Access details will be sent to your email address within <strong>one business day</strong>.<br><br>
+          For urgent enquiries, contact us at <a href="mailto:risktosafe@gmail.com" style="color:#818cf8;">risktosafe@gmail.com</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var currentTool = '';
+
+    function openRegModal(toolName, toolKey) {
+      currentTool = toolName;
+      document.getElementById('regToolName').textContent = toolName;
+      document.getElementById('regFormView').style.display = 'block';
+      document.getElementById('regSuccessView').style.display = 'none';
+      document.getElementById('regOverlay').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeRegModal() {
+      document.getElementById('regOverlay').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    document.getElementById('regOverlay').addEventListener('click', function(e) {
+      if (e.target === this) closeRegModal();
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeRegModal();
+    });
+
+    function submitRegistration() {
+      var name    = document.getElementById('regName').value.trim();
+      var org     = document.getElementById('regOrg').value.trim();
+      var email   = document.getElementById('regEmail').value.trim();
+      var role    = document.getElementById('regRole').value.trim();
+      var sector  = document.getElementById('regSector').value;
+      var country = document.getElementById('regCountry').value.trim();
+
+      if (!name || !org || !email || !role || !sector || !country) {
+        alert('Please complete all fields before submitting.'); return;
+      }
+      var emailRx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRx.test(email)) {
+        alert('Please enter a valid email address.'); return;
+      }
+
+      // Build mailto link so request lands in risktosafe@gmail.com inbox
+      var subject = encodeURIComponent('Risk2Safe Tool Access Request — ' + currentTool);
+      var body = encodeURIComponent(
+        'Tool Requested: ' + currentTool + '\n\n' +
+        'Full Name: ' + name + '\n' +
+        'Organisation: ' + org + '\n' +
+        'Email: ' + email + '\n' +
+        'Job Title: ' + role + '\n' +
+        'Industry Sector: ' + sector + '\n' +
+        'Country: ' + country
+      );
+      window.location.href = 'mailto:risktosafe@gmail.com?subject=' + subject + '&body=' + body;
+
+      // Show success screen
+      document.getElementById('regSuccessToolName').textContent = currentTool;
+      document.getElementById('regFormView').style.display = 'none';
+      document.getElementById('regSuccessView').style.display = 'block';
+    }
+  </script>
+
+  <!-- FOOTER — FIX 5: internal links without rel="nofollow" -->
+  <footer role="contentinfo">
+    <div class="container">
+      <p>
+        <a href="#services">Services</a> &nbsp;|&nbsp;
+        <a href="#industries">Industries</a> &nbsp;|&nbsp;
+        <a href="#about">About</a> &nbsp;|&nbsp;
+        <a href="#ai-tools">AI Tools</a> &nbsp;|&nbsp;
+        <a href="#contact">Contact</a>
+      </p>
+      <p style="margin-top:12px;">
+        &copy; 2025 Risk2Safe &mdash; H2S Consultants Pvt Ltd. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
+
+<!--
+=============================================================
+  SECURITY HEADERS (FIX 6) — Apply at server/hosting level
+  Gamma custom domain users: add these via your DNS/CDN proxy
+  (e.g., Cloudflare Workers or a reverse proxy)
+=============================================================
+
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  Content-Security-Policy: default-src 'self'; img-src 'self' data: https:;
+    script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';
+
+=============================================================
+  IMAGE OPTIMISATION (FIX 4) — To-do checklist
+=============================================================
+
+  1. Download the hero/consultant image from Gamma CDN
+  2. Convert to WebP:
+       cwebp -q 80 image.jpg -o image.webp
+     Or use Squoosh (https://squoosh.app) — free, browser-based
+  3. Target: < 100 kB per image
+  4. Re-upload compressed WebP and update <img src="...">
+  5. Always include:
+       alt="descriptive text"
+       width="NNN"
+       height="NNN"
+       loading="lazy"   (for below-fold images)
+
+=============================================================
+-->
